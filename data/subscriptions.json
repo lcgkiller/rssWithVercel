@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1769860388503",
+    "name": "메르",
+    "url": "https://rss.blog.naver.com/ranto28.xml",
+    "type": "rss",
+    "lastChecked": "2026-01-31T11:56:02.086Z",
+    "lastNotifiedGuid": "https://blog.naver.com/ranto28/224166102400"
+  },
+  {
+    "id": "1769860505298",
+    "name": "BZCF 유튜브",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=@B_ZCF",
+    "type": "rss"
+  },
+  {
+    "id": "1769860560092",
+    "name": "백색나무 유튜브",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=@White_tree",
+    "type": "rss"
+  }
+]
