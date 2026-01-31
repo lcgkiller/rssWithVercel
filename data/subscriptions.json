@@ -18,5 +18,12 @@
     "name": "백색나무 유튜브",
     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=@White_tree",
     "type": "rss"
+  },
+  {
+    "id": "1769860388504",
+    "name": "AI Post",
+    "url": "https://rsshub.app/telegram/channel/aipost",
+    "type": "rss",
+    "translate": true
   }
 ]
