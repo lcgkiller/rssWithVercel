@@ -11,6 +11,7 @@ export interface Subscription {
     name: string;
     url: string;
     type: 'rss' | 'youtube';
+    translate?: boolean;
     lastChecked?: string;
     lastNotifiedGuid?: string; // To avoid duplicate notifications
 }

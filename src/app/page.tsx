@@ -14,6 +14,7 @@ export default function Home() {
   const [subs, setSubs] = useState<Subscription[]>([]);
   const [newName, setNewName] = useState('');
   const [newUrl, setNewUrl] = useState('');
+  const [translate, setTranslate] = useState(false);
   const [checking, setChecking] = useState(false);
 
   useEffect(() => {
@@ -33,11 +34,12 @@ export default function Home() {
     await fetch('/api/subscriptions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: newName, url: newUrl, type: 'rss' }),
+      body: JSON.stringify({ name: newName, url: newUrl, type: 'rss', translate }),
     });
 
     setNewName('');
     setNewUrl('');
+    setTranslate(false);
     fetchSubs();
   };
 
@@ -97,6 +99,18 @@ export default function Home() {
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
               />
             </div>
+
+            <div className="flex items-center space-x-2 my-2">
+              <input
+                type="checkbox"
+                id="translate"
+                checked={translate}
+                onChange={(e) => setTranslate(e.target.checked)}
+                className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+              />
+              <label htmlFor="translate" className="text-sm text-gray-700">Translate to Korean (Auto)</label>
+            </div>
+
             <button
               type="submit"
               className="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-2 rounded-lg transition-colors"

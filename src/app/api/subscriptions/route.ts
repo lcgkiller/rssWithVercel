@@ -14,6 +14,7 @@ export async function POST(request: Request) {
         name: body.name.trim(),
         url: body.url.trim(),
         type: body.type || 'rss',
+        translate: body.translate || false,
         lastChecked: undefined
     };
 
